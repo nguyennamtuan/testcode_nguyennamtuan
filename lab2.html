@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab2</title>
+</head>
+
+<body>
+    <script>
+        function calculateBMI(weight, height) {
+            let bmi = weight / (height ** 2);
+            return bmi;
+        }
+
+        function compareBMIs(markWeight, markHeight, johnWeight, johnHeight) {
+            let markBMI = calculateBMI(markWeight, markHeight);
+            let johnBMI = calculateBMI(johnWeight, johnHeight);
+
+            if (markBMI > johnBMI) {
+                console.log(`BMI của Mark (${markBMI}) cao hơn BMI của John (${johnBMI})!`);
+            } else if (johnBMI > markBMI) {
+                console.log(`BMI của John (${johnBMI}) cao hơn BMI của Mark (${markBMI})!`);
+            } else {
+                console.log(`Mark và John có BMI bằng nhau (${markBMI})!`);
+            }
+        }
+
+        let markWeight1 = 78;
+        let markHeight1 = 1.69;
+        let johnWeight1 = 92;
+        let johnHeight1 = 1.95;
+
+        compareBMIs(markWeight1, markHeight1, johnWeight1, johnHeight1);
+
+        let markWeight2 = 95;
+        let markHeight2 = 1.88;
+        let johnWeight2 = 85;
+        let johnHeight2 = 1.76;
+
+        compareBMIs(markWeight2, markHeight2, johnWeight2, johnHeight2);
+    </script>
+</body>
+
+</html>

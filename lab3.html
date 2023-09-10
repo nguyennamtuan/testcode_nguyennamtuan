@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+var dolphinsScores = [96, 108, 89];
+var koalasScores = [88, 91, 110];
+
+
+var dolphinsAverage = dolphinsScores.reduce((sum, score) => sum + score, 0) / dolphinsScores.length;
+var koalasAverage = koalasScores.reduce((sum, score) => sum + score, 0) / koalasScores.length;
+
+
+if (dolphinsAverage > koalasAverage && dolphinsAverage >= 100) {
+  console.log(" Đội Dolphins chiến thắng!");
+} else if (koalasAverage > dolphinsAverage && koalasAverage >= 100) {
+  console.log(" Đội Koalas chiến thắng!");
+} else if (dolphinsAverage === koalasAverage && dolphinsAverage >= 100 && koalasAverage >= 100) {
+  console.log(" Trận hòa!");
+} else {
+  console.log(" Không có đội nào giành được cúp!");
+}
+    </script>
+</body>
+</html>
